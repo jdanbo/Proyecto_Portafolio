@@ -237,6 +237,27 @@ h2 {
   background-position: center;
 }
 
+.item[class*="project-"]:hover {
+  border-color: var(--verde-neon);
+  transform: scale(1.5);
+  z-index: 40;
+}
+
+.text-box {
+  min-height: 100px;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid #222;
+  position: relative;
+  overflow: visible;
+  transition: transform 280ms ease, border-color 180ms ease;
+}
+
+.text-box:hover {
+  border-color: var(--verde-neon);
+}
+
 /* IMAGENES YA NO */
 .project-panton {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('img/phantom.png');
@@ -255,12 +276,6 @@ h2 {
 }
 .project-inovacion3 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('img/S_Inovacion3.PNG');
-}
-
-.item[class*="project-"]:hover {
-  border-color: var(--verde-neon);
-  transform: scale(1.5);
-  z-index: 40;
 }
 
 /* FORMSSS */
