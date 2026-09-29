@@ -1,0 +1,333 @@
+/* ==========================================================
+   modal.css — La maceta que "crece": módulo expandido
+   ========================================================== */
+
+.modal {
+  width: min(760px, calc(100% - 32px));
+  max-height: calc(100dvh - 48px);
+  padding: 0;
+  border: 0;
+  border-radius: 32px;
+  background: var(--surface);
+  color: var(--fg);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+.modal::backdrop {
+  background: var(--scrim);
+  backdrop-filter: blur(4px);
+}
+
+/* Animación de apertura: crece desde el centro */
+.modal[open] {
+  animation: modal-grow 0.32s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+}
+
+.modal[open]::backdrop {
+  animation: fade-in 0.25s ease;
+}
+
+@keyframes modal-grow {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+.modal__close {
+  position: sticky;
+  top: 16px;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin: 16px 16px 0 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--surface-2);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.modal__close .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.modal__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 44px 48px 48px;
+  font-size: var(--text-md);
+  line-height: 1.65;
+}
+
+.modal__body > p {
+  max-width: 62ch;
+  color: var(--muted);
+}
+
+.modal__body > p.eyebrow {
+  color: var(--accent-text);
+}
+
+.modal__title {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  line-height: 1.1;
+  padding-right: 40px;
+}
+
+.modal__body h3 {
+  margin-top: 10px;
+  font-size: var(--text-lg);
+}
+
+.modal__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal__list li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--muted);
+}
+
+/* Viñeta en forma de hoja */
+.modal__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 10px;
+  height: 10px;
+  border-radius: 0 60% 0 60%;
+  background: var(--leaf);
+}
+
+.modal__list b {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+.modal__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* Línea de tiempo dentro del modal */
+.modal-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding-left: 22px;
+  border-left: 2px solid var(--mint);
+}
+
+.modal-timeline li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modal-timeline li::before {
+  content: "";
+  position: absolute;
+  left: -29px;
+  top: 0.45em;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--leaf);
+  border: 2px solid var(--surface);
+}
+
+.modal-timeline__head {
+  color: var(--fg);
+}
+
+.modal-timeline__head span {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--accent-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.modal-timeline li > p:not(.modal-timeline__head) {
+  color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  .modal {
+    width: 100%;
+    max-width: 100%;
+    max-height: 92dvh;
+    margin: auto 0 0;
+    border-radius: 28px 28px 0 0;
+  }
+
+  .modal__body {
+    padding: 28px 22px calc(32px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .modal__title {
+    font-size: var(--text-xl);
+  }
+}
+
+/* Galería de imágenes dentro del modal */
+.modal-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.modal-gallery figure {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.modal-gallery a {
+  display: block;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+
+.modal-gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.modal-gallery a:hover img {
+  transform: scale(1.04);
+}
+
+.modal-gallery figcaption {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* Imagen de portada dentro de un caso */
+.modal__cover {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+/* Tarjetas de intercambio académico */
+.exchange-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+}
+
+.exchange-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 18px 20px;
+  border-radius: var(--radius-sm);
+  background: var(--mint);
+  color: var(--on-mint);
+}
+
+.modal__body .exchange-card p {
+  color: inherit;
+}
+
+.exchange-card__year {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-xl);
+  line-height: 1.1;
+}
+
+.exchange-card__name {
+  font-weight: 600;
+}
+
+.exchange-card__place {
+  font-size: var(--text-sm);
+}
+
+/* Mi marca: logo, paleta y tipografía */
+.brand-hero {
+  display: flex;
+  justify-content: center;
+  padding: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--mint);
+}
+
+.brand-hero img {
+  width: 150px;
+  height: auto;
+}
+
+.palette {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px;
+}
+
+.palette li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: var(--text-sm);
+}
+
+.palette__chip {
+  height: 56px;
+  margin-bottom: 6px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
+
+.palette code {
+  font-size: var(--text-xs);
+  color: var(--muted);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.modal__zoom {
+  display: block;
+  border-radius: var(--radius-sm);
+}
+
+.modal__note {
+  font-size: var(--text-sm);
+}

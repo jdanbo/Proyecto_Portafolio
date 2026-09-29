@@ -1,0 +1,112 @@
+/* ==========================================================
+   tokens.css — Variables de marca (colores, tipografía, forma)
+   Cambia aquí un valor y se actualiza en todo el sitio.
+   Concepto: "el jardín" — cada módulo es una maceta sobre
+   un fondo hueso con un leve tono verde.
+   ========================================================== */
+
+:root {
+  /* --- Color: modo claro --- */
+  --bg: #F3F4EE;            /* fondo general, hueso verdoso */
+  --surface: #FFFFFF;       /* tarjetas */
+  --surface-2: #ECEFE6;     /* fondos secundarios dentro de tarjetas */
+  --paper: #FFFFFF;         /* fondo para imágenes con fondo blanco (igual en ambos temas) */
+  --line: #DFE4D8;          /* bordes */
+  --fg: #1C1E1B;            /* texto principal */
+  --muted: #555D52;         /* texto secundario */
+  --accent-text: #3F5F40;   /* enlaces y detalles en verde */
+
+  --forest: #3F5F40;        /* verde bosque: tarjeta GRUBORJA, botón principal */
+  --on-forest: #FFFFFF;
+  --on-forest-muted: #D9E7D2;
+  --leaf: #80AA77;          /* verde hoja del logo */
+  --leaf-dark: #537653;     /* verde oscuro del logo */
+  --mint: #E3EDDC;          /* verde menta: tarjeta de idiomas, etiquetas */
+  --on-mint: #24391F;
+  --ink: #1C1E1B;           /* tarjeta oscura (GitHub) */
+  --on-ink: #F3F4EE;
+  --on-ink-muted: #C4D6BB;
+
+  --logo-d: #537653;        /* colores del logo */
+  --logo-leaf: #80AA77;
+
+  --heat-on: #537653;       /* rutina: día de gym */
+  --heat-cardio: #C9DCC0;   /* rutina: cardio o caminata */
+  --shadow: 0 1px 2px rgba(28, 30, 27, 0.04), 0 6px 20px rgba(28, 30, 27, 0.06);
+  --scrim: rgba(18, 22, 17, 0.55);
+
+  /* --- Tipografía --- */
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Outfit", "Segoe UI", system-ui, sans-serif;
+  --text-xs: 0.8125rem;   /* 13px */
+  --text-sm: 0.9375rem;   /* 15px */
+  --text-md: 1.0625rem;   /* 17px */
+  --text-lg: 1.375rem;    /* 22px */
+  --text-xl: 1.875rem;    /* 30px */
+  --text-2xl: 2.25rem;    /* 36px */
+
+  /* --- Forma y espacio --- */
+  --radius: 26px;         /* esquinas de las tarjetas */
+  --radius-sm: 14px;
+  --gap: 20px;            /* espacio entre tarjetas */
+  --pad: 28px;            /* relleno interno de las tarjetas */
+  --max-width: 1200px;
+}
+
+/* Modo oscuro según el sistema (si el visitante no eligió uno) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111410;
+    --surface: #1A1E19;
+    --surface-2: #232922;
+    --line: #2D342B;
+    --fg: #ECEFE8;
+    --muted: #A7B0A3;
+    --accent-text: #9CC792;
+    --forest: #2C4A2E;
+    --on-forest: #F3F4EE;
+    --on-forest-muted: #C4D6BB;
+    --leaf: #8FBD88;
+    --leaf-dark: #80AA77;
+    --mint: #203021;
+    --on-mint: #DCEBD5;
+    --ink: #0A0C09;
+    --on-ink: #ECEFE8;
+    --on-ink-muted: #A7C39E;
+    --logo-d: #ECEFE8;
+    --logo-leaf: #8FBD88;
+    --heat-on: #8FBD88;
+    --heat-cardio: #34432F;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --scrim: rgba(0, 0, 0, 0.65);
+    color-scheme: dark;
+  }
+}
+
+/* Modo oscuro elegido con el botón (mismos valores) */
+:root[data-theme="dark"] {
+  --bg: #111410;
+  --surface: #1A1E19;
+  --surface-2: #232922;
+  --line: #2D342B;
+  --fg: #ECEFE8;
+  --muted: #A7B0A3;
+  --accent-text: #9CC792;
+  --forest: #2C4A2E;
+  --on-forest: #F3F4EE;
+  --on-forest-muted: #C4D6BB;
+  --leaf: #8FBD88;
+  --leaf-dark: #80AA77;
+  --mint: #203021;
+  --on-mint: #DCEBD5;
+  --ink: #0A0C09;
+  --on-ink: #ECEFE8;
+  --on-ink-muted: #A7C39E;
+  --logo-d: #ECEFE8;
+  --logo-leaf: #8FBD88;
+  --heat-on: #8FBD88;
+  --heat-cardio: #34432F;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --scrim: rgba(0, 0, 0, 0.65);
+  color-scheme: dark;
+}

@@ -1,0 +1,801 @@
+/* ==========================================================
+   cards.css — Las "macetas": estilos de cada módulo
+   ========================================================== */
+
+/* ---------- Tarjeta base ---------- */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+  padding: var(--pad);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--fg);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Las tarjetas que se pueden abrir "crecen" un poco al pasar el mouse */
+.card:has(.card__expand, .card__stretch):hover,
+a.card:hover {
+  transform: translateY(-3px);
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.card__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-lg);
+  line-height: 1.15;
+}
+
+.card__title--lg {
+  font-size: var(--text-xl);
+  font-weight: 700;
+}
+
+.card__title--xl {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.card__text {
+  font-size: var(--text-md);
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 52ch;
+}
+
+.card__text--small {
+  font-size: var(--text-sm);
+}
+
+.card__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.card__meta {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--accent-text);
+}
+
+.card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: var(--mint);
+  color: var(--accent-text);
+}
+
+.card__arrow {
+  position: absolute;
+  top: var(--pad);
+  right: var(--pad);
+}
+
+/* Botón que cubre toda la tarjeta, con el ícono de expandir arriba a la derecha */
+.card__expand,
+.card__stretch {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 18px;
+  border: 0;
+  border-radius: var(--radius);
+  background: none;
+  cursor: pointer;
+}
+
+.card__expand .icon {
+  width: 40px;
+  height: 40px;
+  padding: 11px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  color: var(--fg);
+  transition: transform 0.25s ease;
+}
+
+.card__expand:hover .icon {
+  transform: scale(1.1);
+}
+
+/* Enlace de texto al final de una tarjeta */
+.card__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  min-height: 44px;
+  margin-top: auto;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent-text);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card__head .card__more {
+  margin-top: 0;
+  min-height: 0;
+}
+
+.card__more:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---------- Sobre mí ---------- */
+.card--about {
+  flex-direction: row;
+  align-items: center;
+  gap: 28px;
+}
+
+.avatar {
+  position: relative;
+  flex-shrink: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: var(--mint);
+  overflow: hidden;
+}
+
+.avatar__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1; /* la foto tapa el logo de respaldo */
+}
+
+.avatar__fallback {
+  position: absolute;
+  inset: 22%;
+  width: 56%;
+  height: 56%;
+}
+
+/* ---------- Email ---------- */
+.card--email {
+  justify-content: space-between;
+}
+
+.email-text {
+  overflow-wrap: anywhere;
+  color: var(--fg);
+}
+
+.card__hint {
+  position: absolute;
+  top: var(--pad);
+  right: var(--pad);
+  font-size: var(--text-xs);
+  color: var(--muted);
+}
+
+/* ---------- Tarjetas enlace (LinkedIn, GitHub, CV) ---------- */
+.card--link {
+  justify-content: space-between;
+}
+
+.card--link .card__title {
+  color: inherit;
+}
+
+.card--ink {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--on-ink);
+}
+
+.card--ink .card__icon {
+  background: color-mix(in srgb, var(--on-ink) 12%, transparent);
+  color: var(--on-ink-muted);
+}
+
+.card--ink .card__text {
+  color: var(--on-ink-muted);
+}
+
+/* ---------- Proyectos grandes ---------- */
+.card--project {
+  gap: 0;
+  padding: 16px;
+}
+
+.card--project .card__body {
+  padding: 22px 12px 10px;
+}
+
+.card__media {
+  position: relative;
+  flex: 1;
+  min-height: 210px;
+  border-radius: calc(var(--radius) - 10px);
+  background: var(--surface-2);
+  overflow: hidden;
+}
+
+.card__media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Texto que se ve mientras no haya imagen */
+.card__media-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  padding: 4px 11px;
+  border-radius: 999px;
+  background: var(--mint);
+  color: var(--on-mint);
+  font-size: var(--text-xs);
+  font-weight: 600;
+}
+
+/* Variante verde bosque (GRUBORJA) */
+.card--forest {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: var(--on-forest);
+}
+
+.card--forest .card__text,
+.card--forest .card__media-label {
+  color: var(--on-forest-muted);
+}
+
+.card--forest .card__media {
+  background: color-mix(in srgb, var(--on-forest) 10%, transparent);
+}
+
+.card--forest .card__expand .icon {
+  background: var(--surface);
+  color: var(--fg);
+}
+
+/* Interfaz ilustrativa del caso bancario */
+.card__media--ui {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: 28px;
+}
+
+.mock-steps {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  padding-right: 44px; /* deja libre el botón de expandir */
+}
+
+.mock-steps__dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--line);
+  color: var(--muted);
+  font-size: var(--text-xs);
+  font-weight: 600;
+}
+
+.mock-steps__dot.is-done {
+  background: var(--leaf-dark);
+  color: var(--surface);
+}
+
+.mock-steps__line {
+  flex: 1;
+  height: 2px;
+  background: var(--line);
+}
+
+.mock-steps__line.is-done {
+  background: var(--leaf);
+}
+
+.mock-field {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  font-size: var(--text-xs);
+  color: var(--muted);
+}
+
+.mock-field--sign {
+  border-style: dashed;
+  border-color: var(--leaf);
+  color: var(--accent-text);
+}
+
+.mock-row {
+  display: flex;
+  gap: 12px;
+}
+
+.mock-caption {
+  font-size: var(--text-xs);
+  color: var(--muted);
+}
+
+/* ---------- Listas tipo línea de tiempo ---------- */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 16px;
+  border-left: 2px solid var(--mint);
+}
+
+.timeline li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: var(--text-sm);
+}
+
+.timeline b {
+  font-weight: 600;
+}
+
+.timeline__date {
+  flex-shrink: 0;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Idiomas (menta) ---------- */
+.card--mint {
+  background: var(--mint);
+  border-color: var(--mint);
+  color: var(--on-mint);
+  box-shadow: none;
+}
+
+.card--mint .card__more {
+  color: var(--on-mint);
+}
+
+.langs {
+  display: flex;
+  flex-direction: column;
+}
+
+.langs li {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 7px;
+  border-bottom: 1px dashed color-mix(in srgb, var(--on-mint) 25%, transparent);
+  font-size: var(--text-sm);
+}
+
+.langs li span:first-child {
+  font-weight: 600;
+}
+
+.streak {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-lg);
+}
+
+/* ---------- Frase ---------- */
+.card--quote {
+  justify-content: space-between;
+  background: var(--leaf);
+  border-color: var(--leaf);
+  color: var(--ink);
+  box-shadow: none;
+}
+
+.card--quote .card__text {
+  color: var(--ink);
+}
+
+.icon--leaf {
+  width: 34px;
+  height: 34px;
+}
+
+.quote {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+/* ---------- Proceso UX ---------- */
+.process {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+  gap: 8px;
+  margin-top: auto;
+}
+
+.process li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  padding: 12px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  font-weight: 600;
+  font-size: var(--text-sm);
+}
+
+.process__n {
+  font-size: var(--text-xs);
+  color: var(--accent-text);
+}
+
+.process__hint {
+  font-size: var(--text-xs);
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--muted);
+}
+
+/* Palabra destacada dentro de un texto */
+.hl {
+  font-weight: 600;
+  color: var(--fg);
+}
+
+/* ---------- Intercambios (tarjeta de educación) ---------- */
+.exchange {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+}
+
+.exchange__label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+}
+
+.exchange__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: var(--text-sm);
+}
+
+.exchange__list li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+}
+
+.exchange__list b {
+  font-weight: 600;
+}
+
+.exchange__list .timeline__date {
+  margin-left: auto;
+}
+
+/* ---------- Fuera de pantalla: rutina ---------- */
+.routine {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.routine__stats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stat {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.stat__n {
+  min-width: 2.2ch;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-2xl);
+  line-height: 1;
+  color: var(--accent-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.stat__l {
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+.routine__grid {
+  display: grid;
+  grid-template-columns: 22px repeat(7, 22px);
+  gap: 5px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.routine__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.routine__cell {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border-radius: 7px;
+}
+
+.routine__cell.is-gym {
+  background: var(--heat-on);
+}
+
+.routine__cell.is-cardio {
+  background: var(--heat-cardio);
+}
+
+.routine__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: auto;
+  font-size: var(--text-xs);
+  color: var(--muted);
+}
+
+.routine__key {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.routine__legend .routine__cell {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+}
+
+.clock {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+/* ---------- Móvil ---------- */
+@media (max-width: 600px) {
+  .card--about {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .avatar {
+    width: 96px;
+    height: 96px;
+  }
+
+  .card__title--xl {
+    font-size: var(--text-xl);
+  }
+
+  .card--project .card__media {
+    flex: none;
+    height: 190px;
+  }
+
+  .card--link,
+  .card--email {
+    min-height: 150px;
+  }
+
+  .timeline li {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+/* ---------- Proyectos con imagen a un lado (CATI-RPI, 3D) ---------- */
+.card--feature {
+  flex-direction: row;
+  align-items: stretch;
+  gap: 24px;
+  padding: 16px;
+}
+
+.card--feature .card__media {
+  flex: 0 0 44%;
+  min-height: 204px;
+}
+
+.card--feature .card__body {
+  justify-content: center;
+  padding: 12px 52px 12px 0; /* deja libre el botón de expandir */
+}
+
+/* Imagen completa, sin recortar (diagramas) */
+.card__media--contain {
+  background: var(--paper);
+}
+
+.card__media--contain img {
+  object-fit: contain;
+  padding: 10px;
+}
+
+/* Imagen con fondo blanco propio (portada GRUBORJA) */
+.card__media--white {
+  background: var(--paper);
+}
+
+@media (max-width: 600px) {
+  .card--feature {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .card--feature .card__media {
+    flex: none;
+    height: 190px;
+  }
+
+  .card--feature .card__body {
+    padding: 20px 8px 8px;
+  }
+}
+
+/* ---------- Mi marca ---------- */
+.card--brand {
+  gap: 0;
+  padding: 16px;
+}
+
+.card--brand .card__body {
+  padding: 22px 12px 10px;
+}
+
+.brand-stage {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  min-height: 210px;
+  border-radius: calc(var(--radius) - 10px);
+  background: var(--mint);
+}
+
+.brand-stage img {
+  width: 38%;
+  max-width: 170px;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.card--brand:hover .brand-stage img {
+  transform: rotate(-4deg) scale(1.04);
+}
+
+.swatches {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.swatch {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+}
+
+/* ---------- Habilidades de diseño ---------- */
+.skill-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.skill-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+}
+
+.skill-group__title {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+}
+
+.skill-group__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: var(--text-sm);
+}
+
+@media (max-width: 600px) {
+  .card--brand .brand-stage {
+    flex: none;
+    height: 190px;
+  }
+}
