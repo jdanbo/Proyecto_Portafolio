@@ -128,10 +128,11 @@
           <h2 class="card__title">Experience</h2>
           <span class="card__meta">Since 2019</span>
         </header>
-        <ul class="timeline">
-          <li><span><b>Social Media Manager</b> · GRUBORJA</span><span class="timeline__date">2022 – now</span></li>
-          <li><span><b>UX Designer</b> · Banco Industrial</span><span class="timeline__date">2024 – 2025</span></li>
-          <li><span><b>Copywriter</b> · UNO Digital</span><span class="timeline__date">2023 – 2024</span></li>
+        <ul class="timeline timeline--roles">
+          <li><span><b>Social Media Manager &amp; Content Strategist</b> · GRUBORJA<span class="timeline__area">Brand, content and metrics</span></span><span class="timeline__date">2022 – now</span></li>
+          <li><span><b>UX Designer</b> · Banco Industrial<span class="timeline__area">Financial products and complex flows</span></span><span class="timeline__date">2024 – 2025</span></li>
+          <li><span><b>Copywriter</b> · UNO Digital<span class="timeline__area">International digital campaigns</span></span><span class="timeline__date">2023 – 2024</span></li>
+          <li><span><b>Project Manager</b> · Estudio 7 and BetterWare México<span class="timeline__area">Project management internships</span></span><span class="timeline__date">2019 – 2020</span></li>
         </ul>
         <button class="card__more" type="button" data-open="tpl-experiencia" aria-haspopup="dialog">See full experience <span aria-hidden="true">→</span></button>
       </article>
@@ -310,7 +311,7 @@
         <div class="card__body">
           <p class="tags"><span class="tag">Industrial design</span><span class="tag">3D</span></p>
           <h2 class="card__title">3D modeling and renders</h2>
-          <p class="card__text card__text--small">Iconic design objects: Philippe Starck's Juicy Salif, the Panton chair and the OHM table.</p>
+          <p class="card__text card__text--small">Modeling and rendering of design products, from iconic objects to my own proposals.</p>
         </div>
         <button class="card__expand" type="button" data-open="tpl-3d" aria-haspopup="dialog" aria-label="Open gallery: 3D modeling and renders">
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
@@ -332,6 +333,32 @@
         </button>
       </article>
 
+      <!-- Physical products -->
+      <article class="card card--feature span-2" data-cat="trabajo">
+        <div class="card__media card__media--duo">
+          <img src="../img/producto-lattente.webp" alt="Wooden container for Café Lattente with two sliding drink trays" width="1400" height="1223" loading="lazy">
+          <img src="../img/producto-picnic.webp" alt="Wooden picnic tray with a central board, glass holders and woven coasters" width="1400" height="1050" loading="lazy">
+        </div>
+        <div class="card__body">
+          <p class="tags"><span class="tag">Industrial design</span><span class="tag">Prototypes</span></p>
+          <h2 class="card__title">Physical products</h2>
+          <p class="card__text card__text--small">Products designed and built: from concept to real object.</p>
+        </div>
+        <button class="card__expand" type="button" data-open="tpl-fisicos" aria-haspopup="dialog" aria-label="Open: physical products">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+        </button>
+      </article>
+
+      <!-- Volcanoes -->
+      <article class="card card--photo row-2" data-cat="personal">
+        <img class="card__photo" src="../img/volcanes.webp" alt="Daniel on a volcano summit at sunrise, with an erupting volcano behind him" width="1000" height="1106" loading="lazy">
+        <div class="card__photo-body">
+          <p class="card__photo-n">8</p>
+          <h2 class="card__title">volcano summits in Guatemala</h2>
+          <p class="card__text card__text--small">Climbing volcanoes is one of my favorite things off screen.</p>
+        </div>
+      </article>
+
       <!-- Languages + Duolingo -->
       <article class="card card--mint" data-cat="personal sobre-mi">
         <header class="card__head">
@@ -349,32 +376,26 @@
         <a class="card__more" id="duolingo-link" href="https://www.duolingo.com/" target="_blank" rel="noopener" hidden>My Duolingo profile <span aria-hidden="true">↗</span></a>
       </article>
 
-      <!-- Quote -->
-      <figure class="card card--quote" data-cat="sobre-mi">
-        <svg class="icon icon--leaf" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20c8 0 14-6 14-15-9 0-15 6-15 14"/><path d="M5 20c3-5 6-8 10-10"/></svg>
-        <blockquote class="quote">From design to implementation.</blockquote>
-        <figcaption class="card__text card__text--small">How I work</figcaption>
-      </figure>
-
       <!-- Education and technical training -->
       <article class="card card--list span-2" data-cat="sobre-mi">
         <header class="card__head">
           <h2 class="card__title">Education and technical training</h2>
           <button class="card__more" type="button" data-open="tpl-educacion" aria-haspopup="dialog">Details <span aria-hidden="true">→</span></button>
         </header>
+        <p class="card__text card__text--small">Industrial design and software development, plus academic exchanges in Mexico and Colombia.</p>
         <ul class="timeline">
           <li><span><b>Software Development Technician</b> · Campuslands GT</span><span class="timeline__date">2025 – now</span></li>
           <li><span><b>Web Design and Development Technician</b> · Galileo University</span><span class="timeline__date">2025</span></li>
           <li><span><b>B.A. in Industrial Design, Cum Laude</b> · Rafael Landívar University</span><span class="timeline__date">2017 – 2021</span></li>
         </ul>
-        <div class="exchange">
-          <p class="exchange__label">AUSJAL academic exchanges</p>
-          <ul class="exchange__list">
-            <li><b>Universidad Iberoamericana</b> · Mexico City <span class="timeline__date">2019</span></li>
-            <li><b>Universidad Pontificia Bolivariana</b> · Medellín <span class="timeline__date">2020</span></li>
-          </ul>
-        </div>
       </article>
+
+      <!-- Quote -->
+      <figure class="card card--quote" data-cat="sobre-mi">
+        <svg class="icon icon--leaf" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20c8 0 14-6 14-15-9 0-15 6-15 14"/><path d="M5 20c3-5 6-8 10-10"/></svg>
+        <blockquote class="quote">From design to implementation.</blockquote>
+        <figcaption class="card__text card__text--small">How I work</figcaption>
+      </figure>
 
       <!-- Off screen: gym routine and steps (data in js/data.js) -->
       <article class="card span-2" data-cat="personal">
@@ -499,7 +520,7 @@
   </template>
 
   <template id="tpl-gruborja">
-    <p class="eyebrow">Caso de estudio · Marca, web y contenido · 2022 – now</p>
+    <p class="eyebrow">Case study · Brand, web and content · 2022 – now</p>
     <h2 class="modal__title" id="modal-title">GRUBORJA</h2>
     <img class="modal__cover" src="../img/gruborja-portada.webp" alt="GRUBORJA logo over architectural sketches" width="1600" height="900" loading="lazy">
     <p>A Guatemalan architecture and engineering firm. As Social Media Manager and Content Strategist, I led the creation and launch of its digital identity from scratch, along with its website.</p>
@@ -541,8 +562,12 @@
   <template id="tpl-3d">
     <p class="eyebrow">Industrial design</p>
     <h2 class="modal__title" id="modal-title">3D modeling and renders</h2>
-    <p>Part of my industrial design training: modeling and rendering iconic objects to understand their form, materials and how they are built. Tools: 3DS Max and Fusion 360.</p>
+    <p>I model and render design products: from iconic objects, to understand their form, materials and construction, to my own product proposals. Tools: 3DS Max and Fusion 360.</p>
     <div class="modal-gallery">
+      <figure>
+        <a href="../img/render-soporte.webp" target="_blank" rel="noopener"><img src="../img/render-soporte.webp" alt="Render of a bracket with hooks and an adjustable strap, blue on a yellow background" loading="lazy"></a>
+        <figcaption>Product proposal: bracket with hooks</figcaption>
+      </figure>
       <figure>
         <a href="../img/starck.webp" target="_blank" rel="noopener"><img src="../img/starck.webp" alt="Render of the Juicy Salif citrus squeezer" loading="lazy"></a>
         <figcaption>Philippe Starck: Juicy Salif</figcaption>
@@ -551,6 +576,22 @@
         <a href="../img/panton.webp" target="_blank" rel="noopener"><img src="../img/panton.webp" alt="Render of the Panton chair and the OHM table" loading="lazy"></a>
         <figcaption>Panton chair and OHM table</figcaption>
       </figure>
+    </div>
+  </template>
+
+  <template id="tpl-fisicos">
+    <p class="eyebrow">Industrial design</p>
+    <h2 class="modal__title" id="modal-title">Physical products</h2>
+    <p>Products I designed and turned into real objects, built around how and where people use them.</p>
+    <div class="product">
+      <a class="modal__zoom" href="../img/producto-lattente.webp" target="_blank" rel="noopener"><img class="modal__cover" src="../img/producto-lattente.webp" alt="Wooden container for Café Lattente with two sliding drink trays" width="1400" height="1223" loading="lazy"></a>
+      <h3>Drink carrier · Café Lattente</h3>
+      <p>A wooden cabinet with a door and two sliding trays, each holding six drinks, to carry orders safely.</p>
+    </div>
+    <div class="product">
+      <a class="modal__zoom" href="../img/producto-picnic.webp" target="_blank" rel="noopener"><img class="modal__cover" src="../img/producto-picnic.webp" alt="Wooden picnic tray with a central board, glass holders and woven coasters" width="1400" height="1050" loading="lazy"></a>
+      <h3>Modular picnic tray</h3>
+      <p>A wooden tray with a central serving board, removable glass-holder modules and woven coasters.</p>
     </div>
   </template>
 
@@ -612,6 +653,11 @@
         <p>Oversight of commercial projects and collaboration across departments.</p>
       </li>
     </ol>
+    <h3>What I bring to every role</h3>
+    <p class="modal__actions">
+      <button class="btn btn--primary" type="button" data-open="tpl-stack">Technical skills</button>
+      <button class="btn" type="button" data-open="tpl-diseno">Design skills</button>
+    </p>
   </template>
 
   <template id="tpl-stack">
@@ -666,6 +712,7 @@
     <p class="chips"><span class="chip">Photoshop</span><span class="chip">Illustrator</span><span class="chip">Adobe XD</span><span class="chip">Responsive design</span><span class="chip">Design Systems</span><span class="chip">3DS Max</span><span class="chip">Fusion 360</span></p>
     <h3>Methods and management</h3>
     <p class="chips"><span class="chip">Design Thinking</span><span class="chip">Information architecture</span><span class="chip">Notion</span><span class="chip">Trello</span><span class="chip">Jira</span><span class="chip">Microsoft Office</span></p>
+    <p class="modal__actions"><button class="btn btn--primary" type="button" data-open="tpl-ux">How I design products</button></p>
   </template>
 
   <template id="tpl-educacion">
