@@ -503,46 +503,6 @@ a.card:hover {
   color: var(--fg);
 }
 
-/* ---------- Intercambios (tarjeta de educación) ---------- */
-.exchange {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: auto;
-  padding: 14px 16px;
-  border-radius: var(--radius-sm);
-  background: var(--surface-2);
-}
-
-.exchange__label {
-  font-size: var(--text-xs);
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--accent-text);
-}
-
-.exchange__list {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  font-size: var(--text-sm);
-}
-
-.exchange__list li {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 6px;
-}
-
-.exchange__list b {
-  font-weight: 600;
-}
-
-.exchange__list .timeline__date {
-  margin-left: auto;
-}
-
 /* ---------- Fuera de pantalla: rutina ---------- */
 .routine {
   display: flex;
@@ -797,5 +757,85 @@ a.card:hover {
   .card--brand .brand-stage {
     flex: none;
     height: 190px;
+  }
+}
+
+/* ---------- Experiencia: roles con área ---------- */
+.timeline--roles {
+  gap: 12px;
+}
+
+.timeline__area {
+  display: block;
+  font-size: var(--text-xs);
+  color: var(--muted);
+}
+
+/* ---------- Dos imágenes en una tarjeta (productos físicos) ---------- */
+.card__media--duo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  background: none;
+}
+
+.card__media--duo img {
+  position: static;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* ---------- Tarjeta con foto completa (volcanes) ---------- */
+.card--photo {
+  justify-content: flex-end;
+  min-height: 420px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  background: var(--ink);
+  color: #FFFFFF;
+}
+
+.card__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% 30%;
+  transition: transform 0.6s ease;
+}
+
+.card--photo:hover .card__photo {
+  transform: scale(1.04);
+}
+
+/* Degradado para que el texto se lea sobre cualquier foto */
+.card__photo-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 60px var(--pad) var(--pad);
+  background: linear-gradient(to top, rgba(10, 12, 9, 0.85) 20%, rgba(10, 12, 9, 0));
+}
+
+.card__photo-n {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 0.9;
+}
+
+.card--photo .card__text {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 600px) {
+  .card--feature .card__media--duo {
+    height: 200px;
   }
 }
