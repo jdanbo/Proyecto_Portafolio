@@ -1,0 +1,252 @@
+/* ==========================================================
+   layout.css — Encabezado, cuadrícula bento y pie de página
+   ========================================================== */
+
+.site-header,
+main,
+.site-footer {
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+
+/* ---------- Encabezado ---------- */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 28px 36px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.brand__logo {
+  width: 44px;
+  height: 44px;
+}
+
+.brand__logo .db-dark,
+.avatar__fallback .db-dark {
+  fill: var(--logo-d);
+}
+
+.brand__logo .db-light,
+.avatar__fallback .db-light {
+  fill: var(--logo-leaf);
+}
+
+.brand__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.brand__name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.brand__role {
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+/* Filtros */
+.filters {
+  display: flex;
+  gap: 4px;
+  padding: 5px;
+  border-radius: 999px;
+  background: var(--surface-2);
+}
+
+.filters__btn {
+  min-height: 44px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font-size: var(--text-sm);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.filters__btn:hover {
+  color: var(--fg);
+}
+
+.filters__btn[aria-pressed="true"] {
+  background: var(--surface);
+  color: var(--fg);
+  font-weight: 500;
+  box-shadow: var(--shadow);
+}
+
+/* Botones de idioma y tema */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  color: var(--fg);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.lang-switch:hover {
+  background: var(--mint);
+}
+
+/* Botón de tema */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--surface-2);
+  font-size: var(--text-sm);
+  cursor: pointer;
+}
+
+.theme-toggle .icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Muestra luna o sol según el tema activo (lo marca theme.js) */
+.theme-toggle .icon--sun,
+.theme-toggle.is-dark .icon--moon {
+  display: none;
+}
+
+.theme-toggle.is-dark .icon--sun {
+  display: block;
+}
+
+/* ---------- Cuadrícula bento ---------- */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: minmax(236px, auto);
+  grid-auto-flow: dense; /* rellena huecos cuando se filtran módulos */
+  gap: var(--gap);
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.row-2 {
+  grid-row: span 2;
+}
+
+/* ---------- Pie ---------- */
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  padding-block: 40px 48px;
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+/* ---------- Responsivo ---------- */
+
+/* Tablet: 2 columnas */
+@media (max-width: 1000px) {
+  .site-header {
+    flex-wrap: wrap;
+  }
+
+  .filters {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .bento {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Móvil: 1 columna */
+@media (max-width: 600px) {
+  :root {
+    --gap: 14px;
+    --pad: 22px;
+    --radius: 22px;
+  }
+
+  .site-header {
+    padding-block: 18px 22px;
+  }
+
+  .brand__role {
+    display: none;
+  }
+
+  .theme-toggle__label {
+    display: none;
+  }
+
+  .theme-toggle {
+    width: 44px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .filters {
+    background: transparent;
+    padding: 0;
+    gap: 6px;
+  }
+
+  .filters__btn {
+    background: var(--surface-2);
+    color: var(--fg);
+  }
+
+  .filters__btn[aria-pressed="true"] {
+    background: var(--fg);
+    color: var(--bg);
+  }
+
+  .bento {
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-rows: auto;
+  }
+
+  .span-2 {
+    grid-column: auto;
+  }
+
+  .row-2 {
+    grid-row: auto;
+  }
+}
