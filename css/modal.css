@@ -257,8 +257,9 @@
   gap: 2px;
   padding: 18px 20px;
   border-radius: var(--radius-sm);
-  background: var(--mint);
-  color: var(--on-mint);
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  color: var(--fg);
 }
 
 .modal__body .exchange-card p {
@@ -266,10 +267,9 @@
 }
 
 .exchange-card__year {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: var(--text-xl);
-  line-height: 1.1;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--accent-text);
 }
 
 .exchange-card__name {
@@ -330,4 +330,20 @@
 
 .modal__note {
   font-size: var(--text-sm);
+}
+
+/* Producto dentro de un modal: imagen + nombre + descripción */
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.modal__body .product h3 {
+  margin-top: 4px;
+}
+
+.modal__body .product p {
+  color: var(--muted);
 }
