@@ -75,7 +75,7 @@
   if (datos.duolingo.perfil) {
     const enlace = document.getElementById('duolingo-link');
     enlace.href = datos.duolingo.perfil;
-    enlace.hidden = false;
+    document.getElementById('duolingo-box').hidden = false;
   }
 
   /* ---------- Fuera de pantalla: rutina del mes ---------- */

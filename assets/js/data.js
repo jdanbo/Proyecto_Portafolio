@@ -11,11 +11,11 @@ const PORTAFOLIO = {
   // Zona horaria para el reloj de la tarjeta "Guatemala"
   zonaHoraria: 'America/Guatemala',
 
-  // Duolingo: pon tu racha actual y el enlace a tu perfil.
-  // Mientras "racha" sea null, la racha y el enlace no se muestran.
+  // Duolingo: el enlace a tu perfil y tu racha actual.
+  // Mientras "racha" sea null, la racha no se muestra (el enlace sí).
   duolingo: {
     racha: null,        // ejemplo: 245
-    perfil: ''          // ejemplo: 'https://www.duolingo.com/profile/tuUsuario'
+    perfil: 'https://www.duolingo.com/profile/jdanielborjao'
   },
 
   // Fuera de pantalla: tu mes típico.

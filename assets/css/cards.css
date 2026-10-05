@@ -449,6 +449,32 @@ a.card:hover {
   color: var(--on-mint);
 }
 
+/* Duolingo: aviso al pie de la tarjeta de idiomas */
+.duo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: auto;
+  padding: 16px 18px 6px;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--fg);
+}
+
+.duo[hidden] {
+  display: none;
+}
+
+.duo__text {
+  font-size: var(--text-sm);
+  line-height: 1.4;
+}
+
+.card--mint .duo .card__more {
+  margin-top: 0;
+  color: var(--accent-text);
+}
+
 .langs {
   display: flex;
   flex-direction: column;
