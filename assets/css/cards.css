@@ -149,6 +149,32 @@ a.card:hover {
   text-underline-offset: 3px;
 }
 
+/* Tarjetas con "Ver más": toda la tarjeta abre el módulo, no solo el texto */
+.bento .card__more[data-open]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+}
+
+.bento .card__more[data-open]:focus-visible {
+  outline: none;
+}
+
+.bento .card__more[data-open]:focus-visible::after {
+  outline: 3px solid var(--leaf);
+  outline-offset: 3px;
+}
+
+.card:has(.card__more[data-open]):hover {
+  transform: translateY(-3px);
+}
+
+.card:has(.card__more[data-open]):hover .card__more {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* ---------- Sobre mí (2 × 2, el punto de entrada del sitio) ---------- */
 .card--about {
   flex-direction: column;
