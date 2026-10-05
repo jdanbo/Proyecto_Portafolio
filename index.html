@@ -194,7 +194,7 @@
       </article>
 
       <!-- Proyecto: FoodieRank -->
-      <article class="card card--mini-project" data-cat="trabajo habilidades">
+      <article class="card card--mini-project" data-cat="trabajo">
         <p class="eyebrow">Full stack</p>
         <h2 class="card__title">FoodieRank</h2>
         <p class="card__text card__text--small">Plataforma para calificar restaurantes, con API REST y autenticación.</p>
@@ -202,11 +202,19 @@
       </article>
 
       <!-- Proyecto: DevInventory -->
-      <article class="card card--mini-project" data-cat="trabajo habilidades">
+      <article class="card card--mini-project" data-cat="trabajo">
         <p class="eyebrow">Frontend · SPA</p>
         <h2 class="card__title">DevInventory</h2>
         <p class="card__text card__text--small">Gestión y préstamo de equipos, en JavaScript puro.</p>
         <button class="card__more" type="button" data-open="tpl-devinventory" aria-haspopup="dialog">Ver proyecto <span aria-hidden="true">→</span></button>
+      </article>
+
+      <!-- Proyecto: Televerde -->
+      <article class="card card--mini-project" data-cat="trabajo">
+        <p class="eyebrow">Full stack · API REST</p>
+        <h2 class="card__title">Televerde</h2>
+        <p class="card__text card__text--small">API y app web para gestionar programas de TV, con roles y JWT.</p>
+        <button class="card__more" type="button" data-open="tpl-televerde" aria-haspopup="dialog">Ver proyecto <span aria-hidden="true">→</span></button>
       </article>
 
       <!-- Proyecto: GRUBORJA -->
@@ -597,7 +605,7 @@
       <li><b>Autenticación e interfaz:</b> sistema de usuarios, endpoints de API REST e interfaz responsiva con modo oscuro.</li>
     </ul>
     <p class="chips"><span class="chip">JavaScript</span><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">MongoDB</span><span class="chip">CSS3</span></p>
-    <p class="modal__actions"><a class="btn" href="https://github.com/jdanbo" target="_blank" rel="noopener">Ver en GitHub</a></p>
+    <p class="modal__actions"><a class="btn" href="https://github.com/jdanbo/foodierank-frontend" target="_blank" rel="noopener">Ver en GitHub</a></p>
   </template>
 
   <template id="tpl-devinventory">
@@ -611,6 +619,20 @@
     </ul>
     <p class="chips"><span class="chip">JavaScript ES6+</span><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">LocalStorage</span></p>
     <p class="modal__actions"><a class="btn" href="https://github.com/jdanbo" target="_blank" rel="noopener">Ver en GitHub</a></p>
+  </template>
+
+  <template id="tpl-televerde">
+    <p class="eyebrow">Proyecto · Full stack</p>
+    <h2 class="modal__title" id="modal-title">Televerde</h2>
+    <p>API REST y app web para gestionar programas de televisión (novelas, anime y caricaturas), con un panel de administración.</p>
+    <ul class="modal__list">
+      <li><b>Arquitectura MVC:</b> modelos, controladores y rutas en Express sobre MongoDB, con validaciones mediante DTOs y express-validator.</li>
+      <li><b>Seguridad:</b> JWT en cookie <code>httpOnly</code>, roles de usuario y administrador, y límite de peticiones para frenar ataques al login.</li>
+      <li><b>Versionado de la API:</b> cada petición declara su versión con un header semver.</li>
+      <li><b>Frontend en JavaScript puro:</b> login y registro, catálogo, detalle con tráiler y panel de administración.</li>
+    </ul>
+    <p class="chips"><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">MongoDB</span><span class="chip">JWT</span><span class="chip">express-validator</span><span class="chip">JavaScript</span></p>
+    <p class="modal__actions"><a class="btn" href="https://github.com/jdanbo/Televerde_ReviewExpress" target="_blank" rel="noopener">Ver en GitHub</a></p>
   </template>
 
   <template id="tpl-experiencia">
