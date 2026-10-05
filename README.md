@@ -9,32 +9,33 @@ Concepto: **el jardín**. Cada módulo de la cuadrícula es una maceta; al abrir
 ## Estructura
 
 ```
-index.html          Versión en español: estructura, tarjetas y contenido de los modales (<template>)
-en/index.html       Versión en inglés (misma estructura, comparte css/, js/ e img/)
-css/tokens.css      Colores de marca, tipografía y radios (modo claro y oscuro)
-css/base.css        Estilos generales, botones, chips, aviso
-css/layout.css      Encabezado, cuadrícula bento, pie y versiones tablet/móvil
-css/cards.css       Estilo de cada módulo
-css/modal.css       Módulo expandido y galerías
-js/i18n.js          Textos que escribe JavaScript, en español e inglés
-js/data.js          Datos que cambian seguido (Duolingo, rutina, correo)
-js/theme.js         Modo claro / oscuro
-js/filters.js       Filtros Todo / Sobre mí / Trabajo / Habilidades / Personal
-js/modal.js         Abre los módulos en grande
-js/widgets.js       Copiar correo, reloj, rutina del mes, imágenes de respaldo
-img/                Foto, imágenes de proyectos y logo en SVG
-cv/                 CV en PDF
-favicon.*, apple-touch-icon.png, web-app-manifest-*.png, site.webmanifest   Íconos
+index.html                Versión en español: estructura, tarjetas y contenido de los modales (<template>)
+en/index.html             Versión en inglés (misma estructura, comparte assets/)
+assets/
+  css/tokens.css          Colores de marca, tipografía y radios (modo claro y oscuro)
+  css/base.css            Estilos generales, botones, chips, aviso
+  css/layout.css          Encabezado, cuadrícula bento, pie y versiones tablet/móvil
+  css/cards.css           Estilo de cada módulo
+  css/modal.css           Módulo expandido y galerías
+  js/i18n.js              Textos que escribe JavaScript, en español e inglés
+  js/data.js              Datos que cambian seguido (Duolingo, rutina, correo)
+  js/theme.js             Modo claro / oscuro
+  js/filters.js           Filtros Todo / Sobre mí / Trabajo / Habilidades / Personal
+  js/modal.js             Abre los módulos en grande
+  js/widgets.js           Copiar correo, reloj, rutina del mes, Duolingo, imágenes de respaldo
+  img/                    Foto, imágenes de proyectos y logo en SVG
+  icons/                  Favicons, íconos de Apple y del manifest, y site.webmanifest
+  cv/                     CV en PDF
 ```
 
 ## Pendientes
 
-1. `js/data.js`: tu racha y perfil de Duolingo. La rutina del mes también se ajusta ahí.
-2. `cv/CV_Daniel_Borja.pdf` es público: considera una versión sin número de teléfono (y, si quieres, una en inglés).
+1. `assets/js/data.js`: si quieres mostrar tu racha de Duolingo, cambia `racha: null` por el número de días.
+2. `assets/cv/CV_Daniel_Borja.pdf` es público: considera una versión sin número de teléfono (y, si quieres, una en inglés).
 
 ## Al cambiar un texto
 
-Cambia el texto en `index.html` y su traducción en `en/index.html`. Las rutas en la versión en inglés empiezan con `../`.
+Cambia el texto en `index.html` y su traducción en `en/index.html`. Las rutas en la versión en inglés empiezan con `../assets/`.
 
 ## Cómo agregar un módulo
 

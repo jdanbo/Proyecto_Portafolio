@@ -12,15 +12,15 @@
   <!-- Vista previa al compartir el enlace -->
   <meta property="og:title" content="Daniel Borja · Developer UX/UI">
   <meta property="og:description" content="Diseño UX/UI y desarrollo frontend desde Guatemala.">
-  <meta property="og:image" content="img/perfil.webp">
+  <meta property="og:image" content="assets/img/perfil.webp">
   <meta property="og:type" content="website">
 
   <!-- Íconos -->
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/favicon-96x96.png">
+  <link rel="shortcut icon" href="assets/icons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="assets/icons/site.webmanifest">
 
   <!-- Tipografías: Bricolage Grotesque (títulos) + Outfit (texto) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,11 +28,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Outfit:wght@400;500;600&display=swap">
 
   <!-- Estilos, en orden: variables → base → estructura → tarjetas → modal -->
-  <link rel="stylesheet" href="css/tokens.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/cards.css">
-  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/cards.css">
+  <link rel="stylesheet" href="assets/css/modal.css">
 
   <!-- Aplica el tema guardado antes de pintar, para evitar un parpadeo -->
   <script>
@@ -82,7 +82,7 @@
       <!-- Sobre mí -->
       <article class="card card--about span-2" data-cat="sobre-mi">
         <div class="avatar">
-          <img class="avatar__img" src="img/perfil.webp" alt="Foto de Daniel Borja" width="800" height="800" data-fallback>
+          <img class="avatar__img" src="assets/img/perfil.webp" alt="Foto de Daniel Borja" width="800" height="800" data-fallback>
           <svg class="avatar__fallback" viewBox="129 152 995 977" aria-hidden="true"><path class="db-dark" fill-rule="evenodd" d="M357.5 1108.9C306.5 1104.1 255.8 1080.1 217.9 1042.9C152.1 978.1 132.1 885.1 164.7 794.6C195.9 707.8 276.5 640.7 366.5 626.6C385.8 623.6 400.0 623.0 456.8 623.0L514.0 623.0L514.0 866.5L514.0 1110.0L440.2 1109.9C399.7 1109.8 362.4 1109.4 357.5 1108.9ZM530.7 1109.3C529.5 1108.2 529.9 175.2 531.0 174.5C533.9 172.7 556.9 172.2 568.8 173.6C634.1 181.2 683.5 227.7 699.2 296.5L701.5 306.5L701.8 621.5C702.1 943.0 702.1 947.7 698.4 966.0C682.7 1044.2 620.8 1101.3 543.6 1108.9C530.7 1110.2 531.5 1110.2 530.7 1109.3Z"/><path class="db-light" fill-rule="evenodd" d="M876.8 1108.5C788.9 1096.5 722.6 1023.9 716.0 932.4C714.7 914.7 714.7 808.2 715.9 809.5C716.4 810.1 719.4 815.0 722.4 820.4C736.8 845.8 757.5 869.3 785.9 892.4C791.1 896.6 796.2 900.6 797.4 901.2C798.6 901.8 801.1 903.6 803.0 905.1C814.2 913.8 859.1 937.9 887.0 950.0C901.4 956.2 935.6 974.0 946.2 980.7C978.0 1000.8 1001.6 1025.2 1014.9 1051.8C1018.8 1059.6 1024.0 1072.1 1024.0 1073.7C1024.0 1075.8 1000.4 1088.5 984.0 1095.3C967.8 1102.0 948.6 1106.9 930.5 1109.0C918.3 1110.4 888.6 1110.1 876.8 1108.5ZM1043.5 1052.2C1042.5 1049.6 1040.1 1044.6 1038.2 1041.0C1012.9 994.9 972.6 962.9 900.0 931.2C824.7 898.4 779.7 865.1 748.6 819.2C730.3 792.2 716.0 748.7 716.0 720.1L716.0 714.0L757.2 713.8C836.1 713.3 892.6 714.4 908.5 716.9C966.4 726.0 1014.2 751.2 1050.3 791.8C1114.9 864.4 1123.0 965.7 1069.6 1032.9C1062.7 1041.6 1047.8 1057.0 1046.3 1057.0C1045.7 1057.0 1044.5 1054.9 1043.5 1052.2ZM715.0 625.8C715.0 565.9 715.7 543.3 718.0 529.5C732.2 445.6 788.2 383.0 870.1 359.5C900.0 350.9 913.1 350.0 1016.2 350.0L1102.0 350.0L1102.0 376.3C1102.0 446.3 1091.3 497.7 1066.4 546.9C1027.4 623.9 960.1 672.0 871.4 686.1C858.2 688.2 853.9 688.4 786.2 688.7L715.0 689.1L715.0 625.8Z"/></svg>
         </div>
         <div class="card__body">
@@ -163,7 +163,7 @@
       <!-- Proyecto: GRUBORJA -->
       <article class="card card--project card--forest span-2 row-2" data-cat="trabajo">
         <div class="card__media card__media--white">
-          <img src="img/gruborja-portada.webp" alt="Logotipo de GRUBORJA sobre bocetos arquitectónicos" width="1600" height="900" loading="lazy">
+          <img src="assets/img/gruborja-portada.webp" alt="Logotipo de GRUBORJA sobre bocetos arquitectónicos" width="1600" height="900" loading="lazy">
         </div>
         <div class="card__body">
           <p class="tags"><span class="tag">Marca</span><span class="tag">Sitio web</span><span class="tag">Contenido</span></p>
@@ -253,7 +253,7 @@
       <!-- Mi marca: logotipo -->
       <article class="card card--brand span-2 row-2" data-cat="sobre-mi trabajo">
         <div class="brand-stage">
-          <img src="img/logo-db.svg" alt="Logotipo de Daniel Borja: monograma db con hojas" width="883" height="888" loading="lazy">
+          <img src="assets/img/logo-db.svg" alt="Logotipo de Daniel Borja: monograma db con hojas" width="883" height="888" loading="lazy">
         </div>
         <div class="card__body">
           <p class="tags"><span class="tag">Marca personal</span><span class="tag">Identidad</span></p>
@@ -275,7 +275,7 @@
       <!-- Proyecto: Ecosistema de Innovación CATI-RPI -->
       <article class="card card--feature span-2" data-cat="trabajo">
         <div class="card__media card__media--contain">
-          <img src="img/innovacion-1.webp" alt="Diagrama del Sistema Cultivo de Innovación: siembra, germinación, madurez, cosecha, procesamiento y propagación" width="570" height="583" loading="lazy">
+          <img src="assets/img/innovacion-1.webp" alt="Diagrama del Sistema Cultivo de Innovación: siembra, germinación, madurez, cosecha, procesamiento y propagación" width="570" height="583" loading="lazy">
         </div>
         <div class="card__body">
           <p class="tags"><span class="tag">UX Research</span><span class="tag">Plataforma web</span></p>
@@ -306,7 +306,7 @@
       <!-- Modelado 3D y renders -->
       <article class="card card--feature span-2" data-cat="trabajo">
         <div class="card__media">
-          <img src="img/starck.webp" alt="Render del exprimidor Juicy Salif de Philippe Starck" width="1200" height="675" loading="lazy">
+          <img src="assets/img/starck.webp" alt="Render del exprimidor Juicy Salif de Philippe Starck" width="1200" height="675" loading="lazy">
         </div>
         <div class="card__body">
           <p class="tags"><span class="tag">Diseño industrial</span><span class="tag">3D</span></p>
@@ -321,7 +321,7 @@
       <!-- Planos técnicos -->
       <article class="card card--feature span-2" data-cat="trabajo habilidades">
         <div class="card__media card__media--contain">
-          <img src="img/plano.webp" alt="Plano técnico CAD con vistas y detalles acotados" width="1186" height="812" loading="lazy">
+          <img src="assets/img/plano.webp" alt="Plano técnico CAD con vistas y detalles acotados" width="1186" height="812" loading="lazy">
         </div>
         <div class="card__body">
           <p class="tags"><span class="tag">Diseño industrial</span><span class="tag">CAD</span></p>
@@ -336,8 +336,8 @@
       <!-- Productos físicos -->
       <article class="card card--feature span-2" data-cat="trabajo">
         <div class="card__media card__media--duo">
-          <img src="img/producto-lattente.webp" alt="Contenedor de madera para Café Lattente con dos bandejas deslizables para bebidas" width="1400" height="1223" loading="lazy">
-          <img src="img/producto-picnic.webp" alt="Bandeja de madera para picnic con tabla central, portavasos y posavasos tejidos" width="1400" height="1050" loading="lazy">
+          <img src="assets/img/producto-lattente.webp" alt="Contenedor de madera para Café Lattente con dos bandejas deslizables para bebidas" width="1400" height="1223" loading="lazy">
+          <img src="assets/img/producto-picnic.webp" alt="Bandeja de madera para picnic con tabla central, portavasos y posavasos tejidos" width="1400" height="1050" loading="lazy">
         </div>
         <div class="card__body">
           <p class="tags"><span class="tag">Diseño industrial</span><span class="tag">Prototipos</span></p>
@@ -351,7 +351,7 @@
 
       <!-- Volcanes -->
       <article class="card card--photo row-2" data-cat="personal">
-        <img class="card__photo" src="img/volcanes.webp" alt="Daniel en la cumbre de un volcán al amanecer, con un volcán en erupción al fondo" width="1000" height="1106" loading="lazy">
+        <img class="card__photo" src="assets/img/volcanes.webp" alt="Daniel en la cumbre de un volcán al amanecer, con un volcán en erupción al fondo" width="1000" height="1106" loading="lazy">
         <div class="card__photo-body">
           <p class="card__photo-n">8</p>
           <h2 class="card__title">cumbres volcánicas en Guatemala</h2>
@@ -417,7 +417,7 @@
       </article>
 
       <!-- CV -->
-      <a class="card card--link" href="cv/CV_Daniel_Borja.pdf" download data-cat="sobre-mi">
+      <a class="card card--link" href="assets/cv/CV_Daniel_Borja.pdf" download data-cat="sobre-mi">
         <span class="card__icon">
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
         </span>
@@ -473,14 +473,14 @@
     <p class="modal__actions">
       <button class="btn btn--primary" type="button" data-copy-email>Copiar correo</button>
       <a class="btn" href="https://www.linkedin.com/in/di-jdbo" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn" href="cv/CV_Daniel_Borja.pdf" download>Descargar CV</a>
+      <a class="btn" href="assets/cv/CV_Daniel_Borja.pdf" download>Descargar CV</a>
     </p>
   </template>
 
   <template id="tpl-marca">
     <p class="eyebrow">Identidad personal</p>
     <h2 class="modal__title" id="modal-title">Mi marca: el monograma db</h2>
-    <div class="brand-hero"><img src="img/logo-db.svg" alt="Logotipo de Daniel Borja" width="883" height="888"></div>
+    <div class="brand-hero"><img src="assets/img/logo-db.svg" alt="Logotipo de Daniel Borja" width="883" height="888"></div>
     <h3>Concepto</h3>
     <p>Mi logotipo es un monograma con mis iniciales. La d y la B comparten el mismo trazo vertical, así que se leen como una sola pieza: diseño y desarrollo en una misma línea, como dice el descriptor "designer, developer".</p>
     <p>Las curvas de la B son dos hojas. El verde y las plantas son algo que me representa, y en este portafolio se convierten en un jardín: cada módulo es una maceta que crece al abrirla.</p>
@@ -497,7 +497,7 @@
     <h3>Tipografía</h3>
     <p><b class="font-display">Bricolage Grotesque</b> para títulos y <b>Outfit</b> para texto.</p>
     <h3>Variaciones</h3>
-    <a class="modal__zoom" href="img/logo-variaciones.webp" target="_blank" rel="noopener"><img class="modal__cover" src="img/logo-variaciones.webp" alt="Sistema de variaciones del logotipo: a color, monocromo, negro, en negativo sobre verde y negro, sobre verde claro, solo ícono y horizontal" width="1122" height="1402" loading="lazy"></a>
+    <a class="modal__zoom" href="assets/img/logo-variaciones.webp" target="_blank" rel="noopener"><img class="modal__cover" src="assets/img/logo-variaciones.webp" alt="Sistema de variaciones del logotipo: a color, monocromo, negro, en negativo sobre verde y negro, sobre verde claro, solo ícono y horizontal" width="1122" height="1402" loading="lazy"></a>
   </template>
 
   <template id="tpl-bi">
@@ -522,7 +522,7 @@
   <template id="tpl-gruborja">
     <p class="eyebrow">Caso de estudio · Marca, web y contenido · 2022 – hoy</p>
     <h2 class="modal__title" id="modal-title">GRUBORJA</h2>
-    <img class="modal__cover" src="img/gruborja-portada.webp" alt="Logotipo de GRUBORJA sobre bocetos arquitectónicos" width="1600" height="900" loading="lazy">
+    <img class="modal__cover" src="assets/img/gruborja-portada.webp" alt="Logotipo de GRUBORJA sobre bocetos arquitectónicos" width="1600" height="900" loading="lazy">
     <p>Firma guatemalteca de arquitectura e ingeniería. Como Social Media Manager y Content Strategist, lideré la creación y el lanzamiento de su identidad digital desde cero, junto con su sitio web.</p>
     <h3>Qué hice</h3>
     <ul class="modal__list">
@@ -545,15 +545,15 @@
     </ul>
     <div class="modal-gallery">
       <figure>
-        <a href="img/innovacion-1.webp" target="_blank" rel="noopener"><img src="img/innovacion-1.webp" alt="Diagrama del Sistema Cultivo de Innovación" loading="lazy"></a>
+        <a href="assets/img/innovacion-1.webp" target="_blank" rel="noopener"><img src="assets/img/innovacion-1.webp" alt="Diagrama del Sistema Cultivo de Innovación" loading="lazy"></a>
         <figcaption>Sistema Cultivo de Innovación</figcaption>
       </figure>
       <figure>
-        <a href="img/innovacion-2.webp" target="_blank" rel="noopener"><img src="img/innovacion-2.webp" alt="Página Nosotros de la plataforma CATI-INDIS" loading="lazy"></a>
+        <a href="assets/img/innovacion-2.webp" target="_blank" rel="noopener"><img src="assets/img/innovacion-2.webp" alt="Página Nosotros de la plataforma CATI-INDIS" loading="lazy"></a>
         <figcaption>Conexión academia y gobierno</figcaption>
       </figure>
       <figure>
-        <a href="img/innovacion-3.webp" target="_blank" rel="noopener"><img src="img/innovacion-3.webp" alt="Catálogo de proyectos de la plataforma CATI-INDIS" loading="lazy"></a>
+        <a href="assets/img/innovacion-3.webp" target="_blank" rel="noopener"><img src="assets/img/innovacion-3.webp" alt="Catálogo de proyectos de la plataforma CATI-INDIS" loading="lazy"></a>
         <figcaption>Catálogo de proyectos</figcaption>
       </figure>
     </div>
@@ -565,15 +565,15 @@
     <p>Modelo y renderizo productos de diseño: desde objetos icónicos, para entender su forma, materiales y construcción, hasta mis propias propuestas de producto. Herramientas: 3DS Max y Fusion 360.</p>
     <div class="modal-gallery">
       <figure>
-        <a href="img/render-soporte.webp" target="_blank" rel="noopener"><img src="img/render-soporte.webp" alt="Render de un soporte con ganchos y correa ajustable, en azul sobre fondo amarillo" loading="lazy"></a>
+        <a href="assets/img/render-soporte.webp" target="_blank" rel="noopener"><img src="assets/img/render-soporte.webp" alt="Render de un soporte con ganchos y correa ajustable, en azul sobre fondo amarillo" loading="lazy"></a>
         <figcaption>Propuesta de producto: soporte con ganchos</figcaption>
       </figure>
       <figure>
-        <a href="img/starck.webp" target="_blank" rel="noopener"><img src="img/starck.webp" alt="Render del exprimidor Juicy Salif" loading="lazy"></a>
+        <a href="assets/img/starck.webp" target="_blank" rel="noopener"><img src="assets/img/starck.webp" alt="Render del exprimidor Juicy Salif" loading="lazy"></a>
         <figcaption>Philippe Starck: Juicy Salif</figcaption>
       </figure>
       <figure>
-        <a href="img/panton.webp" target="_blank" rel="noopener"><img src="img/panton.webp" alt="Render de la silla Panton y la mesa OHM" loading="lazy"></a>
+        <a href="assets/img/panton.webp" target="_blank" rel="noopener"><img src="assets/img/panton.webp" alt="Render de la silla Panton y la mesa OHM" loading="lazy"></a>
         <figcaption>Silla Panton y mesa OHM</figcaption>
       </figure>
     </div>
@@ -584,12 +584,12 @@
     <h2 class="modal__title" id="modal-title">Productos físicos</h2>
     <p>Productos que diseñé y llevé a objeto real, pensados para el uso y el contexto de quien los usa.</p>
     <div class="product">
-      <a class="modal__zoom" href="img/producto-lattente.webp" target="_blank" rel="noopener"><img class="modal__cover" src="img/producto-lattente.webp" alt="Contenedor de madera para Café Lattente con dos bandejas deslizables para bebidas" width="1400" height="1223" loading="lazy"></a>
+      <a class="modal__zoom" href="assets/img/producto-lattente.webp" target="_blank" rel="noopener"><img class="modal__cover" src="assets/img/producto-lattente.webp" alt="Contenedor de madera para Café Lattente con dos bandejas deslizables para bebidas" width="1400" height="1223" loading="lazy"></a>
       <h3>Contenedor de bebidas · Café Lattente</h3>
       <p>Gabinete de madera con puerta y dos bandejas deslizables, cada una con espacio para seis bebidas, para transportar pedidos de forma segura.</p>
     </div>
     <div class="product">
-      <a class="modal__zoom" href="img/producto-picnic.webp" target="_blank" rel="noopener"><img class="modal__cover" src="img/producto-picnic.webp" alt="Bandeja de madera para picnic con tabla central, portavasos y posavasos tejidos" width="1400" height="1050" loading="lazy"></a>
+      <a class="modal__zoom" href="assets/img/producto-picnic.webp" target="_blank" rel="noopener"><img class="modal__cover" src="assets/img/producto-picnic.webp" alt="Bandeja de madera para picnic con tabla central, portavasos y posavasos tejidos" width="1400" height="1050" loading="lazy"></a>
       <h3>Bandeja modular de picnic</h3>
       <p>Bandeja de madera con tabla central para servir, módulos portavasos desmontables y posavasos tejidos.</p>
     </div>
@@ -599,7 +599,7 @@
     <p class="eyebrow">Diseño industrial</p>
     <h2 class="modal__title" id="modal-title">Planos técnicos</h2>
     <p>Documentación técnica en CAD para llevar un diseño a fabricación: vistas del objeto, detalles ampliados a escala y cotas.</p>
-    <a class="modal__zoom" href="img/plano.webp" target="_blank" rel="noopener"><img class="modal__cover" src="img/plano.webp" alt="Plano técnico CAD con vistas superior, frontal, laterales e inferior, y detalles A y B a escala" width="1186" height="812" loading="lazy"></a>
+    <a class="modal__zoom" href="assets/img/plano.webp" target="_blank" rel="noopener"><img class="modal__cover" src="assets/img/plano.webp" alt="Plano técnico CAD con vistas superior, frontal, laterales e inferior, y detalles A y B a escala" width="1186" height="812" loading="lazy"></a>
     <p class="modal__note">Abre la imagen para verla en tamaño completo.</p>
   </template>
 
@@ -749,11 +749,11 @@
   </template>
 
   <!-- Scripts, en orden: textos → datos → tema → filtros → modal → módulos vivos -->
-  <script src="js/i18n.js" defer></script>
-  <script src="js/data.js" defer></script>
-  <script src="js/theme.js" defer></script>
-  <script src="js/filters.js" defer></script>
-  <script src="js/modal.js" defer></script>
-  <script src="js/widgets.js" defer></script>
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/theme.js" defer></script>
+  <script src="assets/js/filters.js" defer></script>
+  <script src="assets/js/modal.js" defer></script>
+  <script src="assets/js/widgets.js" defer></script>
 </body>
 </html>
