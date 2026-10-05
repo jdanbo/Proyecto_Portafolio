@@ -495,10 +495,17 @@ a.card:hover {
 .streak {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
+  margin-bottom: 4px;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: var(--text-lg);
+  font-size: var(--text-xl);
+  line-height: 1.1;
+  color: var(--accent-text);
+}
+
+.streak[hidden] {
+  display: none;
 }
 
 /* ---------- Frase ---------- */

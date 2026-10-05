@@ -12,9 +12,9 @@ const PORTAFOLIO = {
   zonaHoraria: 'America/Guatemala',
 
   // Duolingo: el enlace a tu perfil y tu racha actual.
-  // Mientras "racha" sea null, la racha no se muestra (el enlace sí).
+  // Si pones "racha: null", la racha se oculta (el enlace sigue visible).
   duolingo: {
-    racha: null,        // ejemplo: 245
+    racha: 963,         // días de racha; actualízalo de vez en cuando
     perfil: 'https://www.duolingo.com/profile/jdanielborjao'
   },
 

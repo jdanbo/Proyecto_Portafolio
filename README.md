@@ -30,7 +30,7 @@ assets/
 
 ## Pendientes
 
-1. `assets/js/data.js`: si quieres mostrar tu racha de Duolingo, cambia `racha: null` por el número de días.
+1. `assets/js/data.js`: actualiza tu racha de Duolingo (`racha`) de vez en cuando.
 2. `assets/cv/CV_Daniel_Borja.pdf` es público: considera una versión sin número de teléfono (y, si quieres, una en inglés).
 
 ## Al cambiar un texto
