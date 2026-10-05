@@ -149,18 +149,28 @@ a.card:hover {
   text-underline-offset: 3px;
 }
 
-/* ---------- Sobre mí ---------- */
+/* ---------- Sobre mí (2 × 2, el punto de entrada del sitio) ---------- */
 .card--about {
-  flex-direction: row;
-  align-items: center;
-  gap: 28px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.card--about .card__title--xl {
+  font-size: clamp(2.25rem, 3.4vw, 3rem);
+}
+
+.card--about .card__text {
+  max-width: 44ch;
+  font-size: var(--text-md);
 }
 
 .avatar {
   position: relative;
   flex-shrink: 0;
-  width: 150px;
-  height: 150px;
+  width: 168px;
+  height: 168px;
   border-radius: 50%;
   background: var(--mint);
   overflow: hidden;
@@ -593,6 +603,21 @@ a.card:hover {
   font-variant-numeric: tabular-nums;
   font-weight: 600;
   color: var(--fg);
+}
+
+/* ---------- Tablet ---------- */
+@media (min-width: 601px) and (max-width: 1000px) {
+  .card--about.row-2 {
+    grid-row: auto;
+    flex-direction: row;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .avatar {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 /* ---------- Móvil ---------- */

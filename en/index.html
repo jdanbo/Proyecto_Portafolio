@@ -80,7 +80,7 @@
     <div class="bento" id="bento">
 
       <!-- About -->
-      <article class="card card--about span-2" data-cat="sobre-mi">
+      <article class="card card--about span-2 row-2" data-cat="sobre-mi">
         <div class="avatar">
           <img class="avatar__img" src="../assets/img/perfil.webp" alt="Photo of Daniel Borja" width="800" height="800" data-fallback>
           <svg class="avatar__fallback" viewBox="129 152 995 977" aria-hidden="true"><path class="db-dark" fill-rule="evenodd" d="M357.5 1108.9C306.5 1104.1 255.8 1080.1 217.9 1042.9C152.1 978.1 132.1 885.1 164.7 794.6C195.9 707.8 276.5 640.7 366.5 626.6C385.8 623.6 400.0 623.0 456.8 623.0L514.0 623.0L514.0 866.5L514.0 1110.0L440.2 1109.9C399.7 1109.8 362.4 1109.4 357.5 1108.9ZM530.7 1109.3C529.5 1108.2 529.9 175.2 531.0 174.5C533.9 172.7 556.9 172.2 568.8 173.6C634.1 181.2 683.5 227.7 699.2 296.5L701.5 306.5L701.8 621.5C702.1 943.0 702.1 947.7 698.4 966.0C682.7 1044.2 620.8 1101.3 543.6 1108.9C530.7 1110.2 531.5 1110.2 530.7 1109.3Z"/><path class="db-light" fill-rule="evenodd" d="M876.8 1108.5C788.9 1096.5 722.6 1023.9 716.0 932.4C714.7 914.7 714.7 808.2 715.9 809.5C716.4 810.1 719.4 815.0 722.4 820.4C736.8 845.8 757.5 869.3 785.9 892.4C791.1 896.6 796.2 900.6 797.4 901.2C798.6 901.8 801.1 903.6 803.0 905.1C814.2 913.8 859.1 937.9 887.0 950.0C901.4 956.2 935.6 974.0 946.2 980.7C978.0 1000.8 1001.6 1025.2 1014.9 1051.8C1018.8 1059.6 1024.0 1072.1 1024.0 1073.7C1024.0 1075.8 1000.4 1088.5 984.0 1095.3C967.8 1102.0 948.6 1106.9 930.5 1109.0C918.3 1110.4 888.6 1110.1 876.8 1108.5ZM1043.5 1052.2C1042.5 1049.6 1040.1 1044.6 1038.2 1041.0C1012.9 994.9 972.6 962.9 900.0 931.2C824.7 898.4 779.7 865.1 748.6 819.2C730.3 792.2 716.0 748.7 716.0 720.1L716.0 714.0L757.2 713.8C836.1 713.3 892.6 714.4 908.5 716.9C966.4 726.0 1014.2 751.2 1050.3 791.8C1114.9 864.4 1123.0 965.7 1069.6 1032.9C1062.7 1041.6 1047.8 1057.0 1046.3 1057.0C1045.7 1057.0 1044.5 1054.9 1043.5 1052.2ZM715.0 625.8C715.0 565.9 715.7 543.3 718.0 529.5C732.2 445.6 788.2 383.0 870.1 359.5C900.0 350.9 913.1 350.0 1016.2 350.0L1102.0 350.0L1102.0 376.3C1102.0 446.3 1091.3 497.7 1066.4 546.9C1027.4 623.9 960.1 672.0 871.4 686.1C858.2 688.2 853.9 688.4 786.2 688.7L715.0 689.1L715.0 625.8Z"/></svg>
@@ -122,6 +122,29 @@
         <svg class="icon card__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
       </a>
 
+      <!-- CV -->
+      <a class="card card--link" href="../assets/cv/CV_Daniel_Borja.pdf" download data-cat="sobre-mi">
+        <span class="card__icon">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+        </span>
+        <span class="card__body">
+          <span class="card__title">My CV</span>
+          <span class="card__text card__text--small">PDF, in Spanish</span>
+        </span>
+      </a>
+
+      <!-- GitHub -->
+      <a class="card card--link card--ink" href="https://github.com/jdanbo" target="_blank" rel="noopener" data-cat="sobre-mi trabajo">
+        <span class="card__icon">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
+        </span>
+        <span class="card__body">
+          <span class="card__title">GitHub</span>
+          <span class="card__text card__text--small">@jdanbo · my code</span>
+        </span>
+        <svg class="icon card__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+      </a>
+
       <!-- Experience -->
       <article class="card card--list span-2" data-cat="trabajo">
         <header class="card__head">
@@ -135,44 +158,6 @@
           <li><span><b>Project Manager</b> · Estudio 7 and BetterWare México<span class="timeline__area">Project management internships</span></span><span class="timeline__date">2019 – 2020</span></li>
         </ul>
         <button class="card__more" type="button" data-open="tpl-experiencia" aria-haspopup="dialog">See full experience <span aria-hidden="true">→</span></button>
-      </article>
-
-      <!-- Tech stack -->
-      <article class="card" data-cat="habilidades">
-        <h2 class="card__title">Tech stack</h2>
-        <p class="chips">
-          <span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript</span>
-          <span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">MongoDB</span>
-          <span class="chip">MySQL</span><span class="chip">Git</span>
-        </p>
-        <button class="card__more" type="button" data-open="tpl-stack" aria-haspopup="dialog">See all <span aria-hidden="true">→</span></button>
-      </article>
-
-      <!-- GitHub -->
-      <a class="card card--link card--ink" href="https://github.com/jdanbo" target="_blank" rel="noopener" data-cat="trabajo habilidades">
-        <span class="card__icon">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
-        </span>
-        <span class="card__body">
-          <span class="card__title">GitHub</span>
-          <span class="card__text card__text--small">@jdanbo · my code</span>
-        </span>
-        <svg class="icon card__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
-      </a>
-
-      <!-- Project: GRUBORJA -->
-      <article class="card card--project card--forest span-2 row-2" data-cat="trabajo">
-        <div class="card__media card__media--white">
-          <img src="../assets/img/gruborja-portada.webp" alt="GRUBORJA logo over architectural sketches" width="1600" height="900" loading="lazy">
-        </div>
-        <div class="card__body">
-          <p class="tags"><span class="tag">Brand</span><span class="tag">Website</span><span class="tag">Content</span></p>
-          <h2 class="card__title card__title--lg">GRUBORJA</h2>
-          <p class="card__text">Digital identity built from scratch, website and content strategy for an architecture and engineering firm.</p>
-        </div>
-        <button class="card__expand" type="button" data-open="tpl-gruborja" aria-haspopup="dialog" aria-label="Open case study: GRUBORJA">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-        </button>
       </article>
 
       <!-- Design and UX skills -->
@@ -211,20 +196,46 @@
         </div>
       </article>
 
-      <!-- How I design products: Design Thinking -->
-      <article class="card span-2" data-cat="habilidades">
-        <header class="card__head">
-          <h2 class="card__title">How I design products</h2>
-          <button class="card__more" type="button" data-open="tpl-ux" aria-haspopup="dialog">See process <span aria-hidden="true">→</span></button>
-        </header>
-        <p class="card__text card__text--small">I apply <b class="hl">Design Thinking</b> to every product, from research to prototype delivery.</p>
-        <ol class="process">
-          <li><span class="process__n">1</span>Empathize<span class="process__hint">Interviews and workshops</span></li>
-          <li><span class="process__n">2</span>Define<span class="process__hint">As-Is / To-Be flows</span></li>
-          <li><span class="process__n">3</span>Ideate<span class="process__hint">Co-creation</span></li>
-          <li><span class="process__n">4</span>Prototype<span class="process__hint">Low and high fidelity</span></li>
-          <li><span class="process__n">5</span>Test<span class="process__hint">Usability and handoff</span></li>
-        </ol>
+      <!-- Tech stack -->
+      <article class="card" data-cat="habilidades">
+        <h2 class="card__title">Tech stack</h2>
+        <p class="chips">
+          <span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript</span>
+          <span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">MongoDB</span>
+          <span class="chip">MySQL</span><span class="chip">Git</span>
+        </p>
+        <button class="card__more" type="button" data-open="tpl-stack" aria-haspopup="dialog">See all <span aria-hidden="true">→</span></button>
+      </article>
+
+      <!-- Project: FoodieRank -->
+      <article class="card card--mini-project" data-cat="trabajo habilidades">
+        <p class="eyebrow">Full stack</p>
+        <h2 class="card__title">FoodieRank</h2>
+        <p class="card__text card__text--small">Restaurant rating platform with a REST API and authentication.</p>
+        <button class="card__more" type="button" data-open="tpl-foodierank" aria-haspopup="dialog">View project <span aria-hidden="true">→</span></button>
+      </article>
+
+      <!-- Project: DevInventory -->
+      <article class="card card--mini-project" data-cat="trabajo habilidades">
+        <p class="eyebrow">Frontend · SPA</p>
+        <h2 class="card__title">DevInventory</h2>
+        <p class="card__text card__text--small">Equipment management and lending, in vanilla JavaScript.</p>
+        <button class="card__more" type="button" data-open="tpl-devinventory" aria-haspopup="dialog">View project <span aria-hidden="true">→</span></button>
+      </article>
+
+      <!-- Project: GRUBORJA -->
+      <article class="card card--project card--forest span-2 row-2" data-cat="trabajo">
+        <div class="card__media card__media--white">
+          <img src="../assets/img/gruborja-portada.webp" alt="GRUBORJA logo over architectural sketches" width="1600" height="900" loading="lazy">
+        </div>
+        <div class="card__body">
+          <p class="tags"><span class="tag">Brand</span><span class="tag">Website</span><span class="tag">Content</span></p>
+          <h2 class="card__title card__title--lg">GRUBORJA</h2>
+          <p class="card__text">Digital identity built from scratch, website and content strategy for an architecture and engineering firm.</p>
+        </div>
+        <button class="card__expand" type="button" data-open="tpl-gruborja" aria-haspopup="dialog" aria-label="Open case study: GRUBORJA">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+        </button>
       </article>
 
       <!-- Project: Letters of credit (Bi Banking) -->
@@ -250,6 +261,37 @@
         </button>
       </article>
 
+      <!-- Project: CATI-RPI Innovation Ecosystem -->
+      <article class="card card--feature span-2" data-cat="trabajo">
+        <div class="card__media card__media--contain">
+          <img src="../assets/img/innovacion-1.webp" alt="Diagram of the Innovation Cultivation System: sowing, germination, maturity, harvest, processing and propagation" width="570" height="583" loading="lazy">
+        </div>
+        <div class="card__body">
+          <p class="tags"><span class="tag">UX Research</span><span class="tag">Web platform</span></p>
+          <h2 class="card__title">CATI-RPI Innovation Ecosystem</h2>
+          <p class="card__text card__text--small">A platform connecting URL-INDIS Industrial Design with CATI-RPI to register, manage and share student projects.</p>
+        </div>
+        <button class="card__expand" type="button" data-open="tpl-cati" aria-haspopup="dialog" aria-label="Open case study: CATI-RPI Innovation Ecosystem">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+        </button>
+      </article>
+
+      <!-- How I design products: Design Thinking -->
+      <article class="card span-2" data-cat="habilidades">
+        <header class="card__head">
+          <h2 class="card__title">How I design products</h2>
+          <button class="card__more" type="button" data-open="tpl-ux" aria-haspopup="dialog">See process <span aria-hidden="true">→</span></button>
+        </header>
+        <p class="card__text card__text--small">I apply <b class="hl">Design Thinking</b> to every product, from research to prototype delivery.</p>
+        <ol class="process">
+          <li><span class="process__n">1</span>Empathize<span class="process__hint">Interviews and workshops</span></li>
+          <li><span class="process__n">2</span>Define<span class="process__hint">As-Is / To-Be flows</span></li>
+          <li><span class="process__n">3</span>Ideate<span class="process__hint">Co-creation</span></li>
+          <li><span class="process__n">4</span>Prototype<span class="process__hint">Low and high fidelity</span></li>
+          <li><span class="process__n">5</span>Test<span class="process__hint">Usability and handoff</span></li>
+        </ol>
+      </article>
+
       <!-- My brand: logo -->
       <article class="card card--brand span-2 row-2" data-cat="sobre-mi trabajo">
         <div class="brand-stage">
@@ -270,37 +312,6 @@
         <button class="card__expand" type="button" data-open="tpl-marca" aria-haspopup="dialog" aria-label="Open: my brand">
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
         </button>
-      </article>
-
-      <!-- Project: CATI-RPI Innovation Ecosystem -->
-      <article class="card card--feature span-2" data-cat="trabajo">
-        <div class="card__media card__media--contain">
-          <img src="../assets/img/innovacion-1.webp" alt="Diagram of the Innovation Cultivation System: sowing, germination, maturity, harvest, processing and propagation" width="570" height="583" loading="lazy">
-        </div>
-        <div class="card__body">
-          <p class="tags"><span class="tag">UX Research</span><span class="tag">Web platform</span></p>
-          <h2 class="card__title">CATI-RPI Innovation Ecosystem</h2>
-          <p class="card__text card__text--small">A platform connecting URL-INDIS Industrial Design with CATI-RPI to register, manage and share student projects.</p>
-        </div>
-        <button class="card__expand" type="button" data-open="tpl-cati" aria-haspopup="dialog" aria-label="Open case study: CATI-RPI Innovation Ecosystem">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
-        </button>
-      </article>
-
-      <!-- Project: FoodieRank -->
-      <article class="card card--mini-project" data-cat="trabajo habilidades">
-        <p class="eyebrow">Full stack</p>
-        <h2 class="card__title">FoodieRank</h2>
-        <p class="card__text card__text--small">Restaurant rating platform with a REST API and authentication.</p>
-        <button class="card__more" type="button" data-open="tpl-foodierank" aria-haspopup="dialog">View project <span aria-hidden="true">→</span></button>
-      </article>
-
-      <!-- Project: DevInventory -->
-      <article class="card card--mini-project" data-cat="trabajo habilidades">
-        <p class="eyebrow">Frontend · SPA</p>
-        <h2 class="card__title">DevInventory</h2>
-        <p class="card__text card__text--small">Equipment management and lending, in vanilla JavaScript.</p>
-        <button class="card__more" type="button" data-open="tpl-devinventory" aria-haspopup="dialog">View project <span aria-hidden="true">→</span></button>
       </article>
 
       <!-- 3D modeling and renders -->
@@ -349,33 +360,6 @@
         </button>
       </article>
 
-      <!-- Volcanoes -->
-      <article class="card card--photo row-2" data-cat="personal">
-        <img class="card__photo" src="../assets/img/volcanes.webp" alt="Daniel on a volcano summit at sunrise, with an erupting volcano behind him" width="1000" height="1106" loading="lazy">
-        <div class="card__photo-body">
-          <p class="card__photo-n">8</p>
-          <h2 class="card__title">volcano summits in Guatemala</h2>
-          <p class="card__text card__text--small">Climbing volcanoes is one of my favorite things off screen.</p>
-        </div>
-      </article>
-
-      <!-- Languages + Duolingo -->
-      <article class="card card--mint" data-cat="personal sobre-mi">
-        <header class="card__head">
-          <h2 class="card__title">Languages</h2>
-          <span class="streak" id="duolingo-streak" hidden>
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22c4 0 7-2.7 7-6.5 0-4-3.5-6.5-4.5-10.5-2 1.5-3 3.5-3 5.5C10 9 9 8 9 6c-2 2-4 4.8-4 9.5C5 19.3 8 22 12 22z"/></svg>
-            <span id="duolingo-dias"></span>
-          </span>
-        </header>
-        <ul class="langs">
-          <li><span>Spanish</span><span>Native</span></li>
-          <li><span>English</span><span>Native</span></li>
-          <li><span>Portuguese</span><span>A1 – A2</span></li>
-        </ul>
-        <a class="card__more" id="duolingo-link" href="https://www.duolingo.com/" target="_blank" rel="noopener" hidden>My Duolingo profile <span aria-hidden="true">↗</span></a>
-      </article>
-
       <!-- Education and technical training -->
       <article class="card card--list span-2" data-cat="sobre-mi">
         <header class="card__head">
@@ -390,12 +374,15 @@
         </ul>
       </article>
 
-      <!-- Quote -->
-      <figure class="card card--quote" data-cat="sobre-mi">
-        <svg class="icon icon--leaf" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20c8 0 14-6 14-15-9 0-15 6-15 14"/><path d="M5 20c3-5 6-8 10-10"/></svg>
-        <blockquote class="quote">From design to implementation.</blockquote>
-        <figcaption class="card__text card__text--small">How I work</figcaption>
-      </figure>
+      <!-- Volcanoes -->
+      <article class="card card--photo row-2" data-cat="personal">
+        <img class="card__photo" src="../assets/img/volcanes.webp" alt="Daniel on a volcano summit at sunrise, with an erupting volcano behind him" width="1000" height="1106" loading="lazy">
+        <div class="card__photo-body">
+          <p class="card__photo-n">8</p>
+          <h2 class="card__title">volcano summits in Guatemala</h2>
+          <p class="card__text card__text--small">Climbing volcanoes is one of my favorite things off screen.</p>
+        </div>
+      </article>
 
       <!-- Off screen: gym routine and steps (data in js/data.js) -->
       <article class="card span-2" data-cat="personal">
@@ -416,16 +403,29 @@
         </p>
       </article>
 
-      <!-- CV -->
-      <a class="card card--link" href="../assets/cv/CV_Daniel_Borja.pdf" download data-cat="sobre-mi">
-        <span class="card__icon">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
-        </span>
-        <span class="card__body">
-          <span class="card__title">My CV</span>
-          <span class="card__text card__text--small">PDF, in Spanish</span>
-        </span>
-      </a>
+      <!-- Languages + Duolingo -->
+      <article class="card card--mint row-2" data-cat="personal sobre-mi">
+        <header class="card__head">
+          <h2 class="card__title">Languages</h2>
+          <span class="streak" id="duolingo-streak" hidden>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22c4 0 7-2.7 7-6.5 0-4-3.5-6.5-4.5-10.5-2 1.5-3 3.5-3 5.5C10 9 9 8 9 6c-2 2-4 4.8-4 9.5C5 19.3 8 22 12 22z"/></svg>
+            <span id="duolingo-dias"></span>
+          </span>
+        </header>
+        <ul class="langs">
+          <li><span>Spanish</span><span>Native</span></li>
+          <li><span>English</span><span>Native</span></li>
+          <li><span>Portuguese</span><span>A1 – A2</span></li>
+        </ul>
+        <a class="card__more" id="duolingo-link" href="https://www.duolingo.com/" target="_blank" rel="noopener" hidden>My Duolingo profile <span aria-hidden="true">↗</span></a>
+      </article>
+
+      <!-- Quote -->
+      <figure class="card card--quote" data-cat="sobre-mi">
+        <svg class="icon icon--leaf" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20c8 0 14-6 14-15-9 0-15 6-15 14"/><path d="M5 20c3-5 6-8 10-10"/></svg>
+        <blockquote class="quote">From design to implementation.</blockquote>
+        <figcaption class="card__text card__text--small">How I work</figcaption>
+      </figure>
 
       <!-- Location and local time -->
       <article class="card" data-cat="sobre-mi personal">
@@ -437,7 +437,6 @@
           <p class="card__text card__text--small">It is <time class="clock" id="local-time">--:--</time> here · GMT−6</p>
         </div>
       </article>
-
     </div>
   </main>
 
