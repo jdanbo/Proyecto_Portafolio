@@ -112,6 +112,45 @@
   document.getElementById('gym-pasos').textContent = Math.round(datos.rutina.pasosDiarios / 1000) + 'k';
   rutina.setAttribute('aria-label', T.rutina(totalGym));
 
+  /* ---------- Frases: cambian solas cada 8 s, o con los puntos ---------- */
+  const frases = document.querySelectorAll('.quotes__item');
+  const puntos = document.querySelectorAll('.quotes__dot');
+  const tarjetaFrases = document.querySelector('.card--quote');
+  let fraseActual = 0;
+  let pausa = false;
+
+  function mostrarFrase(i) {
+    fraseActual = (i + frases.length) % frases.length;
+    frases.forEach(function (frase, j) {
+      frase.classList.toggle('is-active', j === fraseActual);
+    });
+    puntos.forEach(function (punto, j) {
+      punto.setAttribute('aria-pressed', String(j === fraseActual));
+    });
+  }
+
+  puntos.forEach(function (punto, i) {
+    punto.addEventListener('click', function () {
+      mostrarFrase(i);
+    });
+  });
+
+  if (tarjetaFrases && frases.length > 1) {
+    // Se detiene mientras el mouse o el foco están sobre la tarjeta
+    ['mouseenter', 'focusin'].forEach(function (ev) {
+      tarjetaFrases.addEventListener(ev, function () { pausa = true; });
+    });
+    ['mouseleave', 'focusout'].forEach(function (ev) {
+      tarjetaFrases.addEventListener(ev, function () { pausa = false; });
+    });
+    // Sin cambio automático si el visitante prefiere menos movimiento
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setInterval(function () {
+        if (!pausa && !document.hidden) mostrarFrase(fraseActual + 1);
+      }, 8000);
+    }
+  }
+
   /* ---------- Imágenes de respaldo ---------- */
   // Si una imagen marcada con data-fallback no existe, se oculta y queda el respaldo
   document.querySelectorAll('img[data-fallback]').forEach(function (img) {

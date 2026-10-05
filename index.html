@@ -417,12 +417,24 @@
         </div>
       </article>
 
-      <!-- Frase -->
-      <figure class="card card--quote" data-cat="sobre-mi">
+      <!-- Frases -->
+      <article class="card card--quote" data-cat="sobre-mi">
         <svg class="icon icon--leaf" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20c8 0 14-6 14-15-9 0-15 6-15 14"/><path d="M5 20c3-5 6-8 10-10"/></svg>
-        <blockquote class="quote">Del diseño a la implementación.</blockquote>
-        <figcaption class="card__text card__text--small">Mi forma de trabajar</figcaption>
-      </figure>
+        <div class="quotes" id="quotes">
+          <figure class="quotes__item is-active">
+            <blockquote class="quote" lang="en">Learning about the natural world is one thing; learning from the natural world — that’s the switch.</blockquote>
+            <figcaption class="quote__author">Janine Benyus</figcaption>
+          </figure>
+          <figure class="quotes__item">
+            <blockquote class="quote" lang="en">If you want to understand function, study structure.</blockquote>
+            <figcaption class="quote__author">Francis Crick</figcaption>
+          </figure>
+        </div>
+        <div class="quotes__nav">
+          <button class="quotes__dot" type="button" aria-label="Ver frase 1" aria-pressed="true"></button>
+          <button class="quotes__dot" type="button" aria-label="Ver frase 2" aria-pressed="false"></button>
+        </div>
+      </article>
 
       <!-- Ubicación y hora local -->
       <article class="card" data-cat="sobre-mi personal">

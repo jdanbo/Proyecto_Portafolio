@@ -517,8 +517,24 @@ a.card:hover {
   box-shadow: none;
 }
 
-.card--quote .card__text {
-  color: var(--ink);
+/* Varias frases en la misma tarjeta: se apilan y solo se ve la activa */
+.quotes {
+  display: grid;
+}
+
+.quotes__item {
+  grid-area: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0.5s;
+}
+
+.quotes__item.is-active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .icon--leaf {
@@ -528,10 +544,50 @@ a.card:hover {
 
 .quote {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: var(--text-lg);
-  line-height: 1.2;
-  text-wrap: balance;
+  font-weight: 600;
+  font-size: var(--text-md);
+  line-height: 1.3;
+  text-wrap: pretty;
+}
+
+.quote__author {
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+.quote__author::before {
+  content: "— ";
+}
+
+.quotes__nav {
+  display: flex;
+  margin: -12px 0 -12px -12px; /* área de clic de 44 px sin mover el diseño */
+}
+
+.quotes__dot {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.quotes__dot::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+}
+
+.quotes__dot[aria-pressed="true"]::before {
+  background: var(--ink);
 }
 
 /* ---------- Proceso UX ---------- */
