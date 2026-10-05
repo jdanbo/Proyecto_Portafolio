@@ -13,12 +13,12 @@
   --paper: #FFFFFF;         /* fondo para imágenes con fondo blanco (igual en ambos temas) */
   --line: #DFE4D8;          /* bordes */
   --fg: #1C1E1B;            /* texto principal */
-  --muted: #555D52;         /* texto secundario */
+  --muted: #475045;         /* texto secundario (contraste AAA, 7:1 o más) */
   --accent-text: #3F5F40;   /* enlaces y detalles en verde */
 
   --forest: #3F5F40;        /* verde bosque: tarjeta GRUBORJA, botón principal */
   --on-forest: #FFFFFF;
-  --on-forest-muted: #D9E7D2;
+  --on-forest-muted: #E4EEDF;
   --leaf: #80AA77;          /* verde hoja del logo */
   --leaf-dark: #537653;     /* verde oscuro del logo */
   --mint: #E3EDDC;          /* verde menta: tarjeta de idiomas, etiquetas */
@@ -61,11 +61,11 @@
     --surface-2: #232922;
     --line: #2D342B;
     --fg: #ECEFE8;
-    --muted: #A7B0A3;
-    --accent-text: #9CC792;
+    --muted: #B3C2AD;
+    --accent-text: #A8D39E;
     --forest: #2C4A2E;
     --on-forest: #F3F4EE;
-    --on-forest-muted: #C4D6BB;
+    --on-forest-muted: #D2E3CA;
     --leaf: #8FBD88;
     --leaf-dark: #80AA77;
     --mint: #203021;
@@ -90,11 +90,11 @@
   --surface-2: #232922;
   --line: #2D342B;
   --fg: #ECEFE8;
-  --muted: #A7B0A3;
-  --accent-text: #9CC792;
+  --muted: #B3C2AD;
+  --accent-text: #A8D39E;
   --forest: #2C4A2E;
   --on-forest: #F3F4EE;
-  --on-forest-muted: #C4D6BB;
+  --on-forest-muted: #D2E3CA;
   --leaf: #8FBD88;
   --leaf-dark: #80AA77;
   --mint: #203021;
