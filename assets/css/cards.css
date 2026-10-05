@@ -195,8 +195,8 @@ a.card:hover {
 .avatar {
   position: relative;
   flex-shrink: 0;
-  width: 168px;
-  height: 168px;
+  width: 232px;
+  height: 232px;
   border-radius: 50%;
   background: var(--mint);
   overflow: hidden;
@@ -674,8 +674,8 @@ a.card:hover {
   }
 
   .avatar {
-    width: 150px;
-    height: 150px;
+    width: 190px;
+    height: 190px;
   }
 }
 
@@ -688,8 +688,8 @@ a.card:hover {
   }
 
   .avatar {
-    width: 96px;
-    height: 96px;
+    width: 128px;
+    height: 128px;
   }
 
   .card__title--xl {
